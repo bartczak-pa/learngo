@@ -29,4 +29,9 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	hello()
+}
+
+func bye() {
+	println("bye bye")
 }
