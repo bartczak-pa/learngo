@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Declare with bits
 //
@@ -37,8 +39,10 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// var i int
-	// var i8 int8
+	var speed int
+	var temperature int8
+	var height int16
+	var isOn bool
 
-	// CONTINUE FROM HERE....
+	fmt.Println(speed, temperature, height, isOn)
 }
