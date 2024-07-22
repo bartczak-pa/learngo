@@ -8,6 +8,8 @@
 
 package main
 
+import "golang.org/x/crypto/acme"
+
 // ---------------------------------------------------------
 // EXERCISE: Undeclarables
 //
@@ -26,10 +28,10 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// var ? int
-	// var ? int
-	// var ? int
-	// var ? int
-	// var ? int
-	// var ? int
+	var 3speed int
+	var !speed string
+	var !speed bool
+	var var float64
+	var func int
+	var package string
 }
