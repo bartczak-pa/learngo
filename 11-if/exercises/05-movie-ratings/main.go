@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // STORY
 //
@@ -53,4 +58,22 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	if len(os.Args) != 2 {
+		println("Requires age")
+		return
+	}
+
+	age, err := strconv.Atoi(os.Args[1])
+
+	if err != nil || age <= 0 {
+		println("Wrong age:", os.Args[1])
+		return
+	} else if age > 17 {
+		println("R-Rated")
+	} else if age >= 13 {
+		println("PG-13")
+	} else {
+		println("PG-Rated")
+	}
+
 }
