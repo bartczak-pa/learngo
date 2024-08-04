@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Sum the Numbers: Verbose Edition
 //
@@ -26,4 +28,15 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	const minimum, maximum = 1, 10
+	var sum int
+
+	for i := minimum; i <= maximum; i++ {
+		sum += i
+		fmt.Print(i)
+		if i < maximum {
+			fmt.Print(" + ")
+		}
+	}
+	fmt.Printf(" = %d\n", sum)
 }
