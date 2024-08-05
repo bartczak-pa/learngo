@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Break Up
 //
@@ -28,4 +34,39 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	if len(os.Args) < 3 {
+		fmt.Println("gimme two numbers")
+		return
+	}
+
+	minimum, err1 := strconv.Atoi(os.Args[1])
+	maximum, err2 := strconv.Atoi(os.Args[2])
+	if err1 != nil || err2 != nil || minimum >= maximum {
+		fmt.Println("wrong numbers")
+		return
+	}
+
+	var (
+		i   = minimum
+		sum int
+	)
+
+	for {
+		if i > maximum {
+			break
+		} else if i%2 != 0 {
+			i++
+			continue
+		}
+
+		fmt.Print(i)
+		if i < maximum-1 {
+			fmt.Print(" + ")
+		}
+
+		sum += i
+		i++
+	}
+	fmt.Printf(" = %d\n", sum)
+	fmt.Printf(" = %d\n", sum)
 }
